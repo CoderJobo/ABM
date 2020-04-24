@@ -5,7 +5,7 @@
  * 2. Parameterized constructor TextExtractor(String filename)
  * 3. Method extractElements(String filename)
  * 4. Method getElements()
- * 5. Mehthod printElements()
+ * 5. Method printElements()
  * 
  * When an instance of the class is created it takes a file in as a String parameter and passes it to 
  * the extractElements(String filename) method which then parses the file for lines beginning with 'LOC',
