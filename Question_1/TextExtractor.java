@@ -21,7 +21,6 @@ import java.io.FileReader;
 import java.io.IOException;
 
 import java.util.Vector;
-import java.util.Arrays;
 
 public class TextExtractor
 {
@@ -43,7 +42,6 @@ public class TextExtractor
                 if(line.substring(0, 3).equals("LOC")){
                     String lineElements = line.substring(4, line.length());                     
                     String[] separateElements = lineElements.split("\\+");
-                    //System.out.print(Arrays.toString(separateElements));
                     elements.add(separateElements);
                 }
                 line = reader.readLine();
@@ -53,6 +51,10 @@ public class TextExtractor
             e.printStackTrace();
         }
         return elements;
+    }
+    
+    public Vector<String[]> getElements(){
+    	return elements;
     }
     
     public void printElements(){
