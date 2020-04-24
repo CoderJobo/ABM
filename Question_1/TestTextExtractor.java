@@ -1,5 +1,5 @@
 /**
- * This class tests the class ParseText by creating an instance of the class and passing it an input
+ * This class tests the class TextExtractor by creating an instance of the class and passing it an input
  * String filename. It then calls the printElements() method to print out the elements extracted 
  * from the file.
  *
@@ -7,21 +7,23 @@
  * @version 16/04/2020
  */
 
-import static org.junit.Assert.*;
-import org.junit.After;
-import org.junit.Before;
-import org.junit.Test;
-import java.util.Vector;
-
 public class TestTextExtractor
 {
-    public TestTextExtractor()
-    {
+    public TestTextExtractor(){
     }
    
     public static void main (String[] args){
+    	
         String fileName = "MessageText.txt";
-        TextExtractor edifactMessageText = new TextExtractor(fileName);
-        edifactMessageText.printElements();
+        
+        // Test extractElements(String filename) method
+        TextExtractor messageText = new TextExtractor(fileName);
+        
+        // Test getElements() method
+        System.out.print("There are " + messageText.getElements().size() + " LOC segments ");
+        System.out.println("each containing " + messageText.getElements().get(0).length + " elements\n");
+        
+        // Test printElements() method
+        messageText.printElements();
     }   
 }
