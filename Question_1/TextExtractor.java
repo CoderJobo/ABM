@@ -1,15 +1,17 @@
 /**
- * This class contains four methods:
+ * This class contains five methods:
  * 
- * 1. Default constructor ParseText()
- * 2. Parameterized constructor ParseText(String filename)
+ * 1. Default constructor TextExtractor()
+ * 2. Parameterized constructor TextExtractor(String filename)
  * 3. Method extractElements(String filename)
- * 4. Mehthod printElements()
+ * 4. Method getElements()
+ * 5. Mehthod printElements()
  * 
  * When an instance of the class is created it takes a file in as a String parameter and passes it to 
  * the extractElements(String filename) method which then parses the file for lines beginning with 'LOC',
  * extracts the second and third element of each of those lines and places them into an array which is 
  * stored in a private variable called 'elements'. 
+ * The method getElements() returns 'elements' as a Vector of String arrays
  * The method printElements() prints out the contents of 'elements'
  * 
  * @author (Joan Hickey) 
