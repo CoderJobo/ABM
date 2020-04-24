@@ -1,17 +1,19 @@
 
 /**
- * This class contains three methods: 
+ * This class contains four methods: 
  * 
  * 1. Default constructor ExtractXML()
  * 2. Parameterized constructor ExtractXML(String fileName, String tagName, String itemName, String[] items)
  * 3. Method extractValues(String fileName, String tagName, String itemName, String[] items)
- * 4. Method printValues()
+ * 4. Method getValues()
+ * 5. Method printValues()
  * 
  * When an instance of the class is created, it takes in an XML file as well as the name of a tag, the name
  * of an item in the tag and an array of string values. These are passed to the 
  * extractValues(String fileName, String tagName, String itemName, String[] items) method and the contents of 
  * the XML file are parsed and placed into a document file. The values of the input items are extracted and 
  * stored in a private String array called 'values'. 
+ * The method getValues() returns 'values' as a String array
  * The method printValues() prints out the contents of 'values'.
  * 
  * @author Joan Hickey 
@@ -56,6 +58,10 @@ public class XMLExtractor
             }
         }
         return values;
+    }
+    
+    public String[] getValues() {
+    	return values;
     }
     
     public void printValues(){
